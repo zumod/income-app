@@ -1,58 +1,62 @@
-# Slint Rust Template
+# Income Divider App
 
-A template for a Rust application that's using [Slint](https://slint.rs) for the user interface.
+The Income Divider App is a simple Rust application designed to calculate and display the distribution of income among various categories based on predefined percentages.
 
-## About
+![Screenshot](screenshot.png)
 
-This template helps you get started developing a Rust application with Slint as toolkit
-for the user interface. It demonstrates the integration between the `.slint` UI markup and
-Rust code, how to trigger react to callbacks, get and set properties and use basic widgets.
+## Overview
+
+The application takes a total income value and divides it according to predetermined percentage allocations. It specifically divides the income into the following categories:
+- Taxes
+- Owner's Share
+- Profit
+- Operational Expenses (OpEx)
+
+The predefined percentages used for distribution are as follows:
+- Taxes: 30%
+- Owner's Share: 55%
+- Profit: 5%
+- Operational Expenses (OpEx): 10%
 
 ## Usage
 
-1. Install Rust by following the [Rust Getting Started Guide](https://www.rust-lang.org/learn/get-started).
-   Once this is done, you should have the ```rustc``` compiler and the ```cargo``` build system installed in your path.
-2. Install [`cargo-generate`](https://github.com/cargo-generate/cargo-generate)
-    ```
-    cargo install cargo-generate
-    ```
-3. Set up a sample project with this template
-    ```
-    cargo generate --git https://github.com/slint-ui/slint-rust-template --name my-project
-    cd my-project
-    ```
-3. Build with cargo
-    ```
-    cargo build
-    ```
-4. Run the application binary
-     ```
-     cargo run
-     ```
+1. Input the total income value.
+2. The application calculates the income distribution based on the provided value and the predefined percentages.
+3. The calculated amounts for Taxes, Owner's Share, Profit, and OpEx are displayed.
 
-We recommend using an IDE for development, along with our [LSP-based IDE integration for `.slint` files](https://github.com/slint-ui/slint/blob/master/tools/lsp/README.md). You can also load this project directly in [Visual Studio Code](https://code.visualstudio.com) and install our [Slint extension](https://marketplace.visualstudio.com/items?itemName=Slint.slint).
+## How to Run
 
-## Next Steps
+To run the application, follow these steps:
+1. Ensure Rust is installed on your system.
+2. Clone the repository.
+3. Open a terminal window and navigate to the project directory.
+4. Run `cargo run` to execute the application.
 
-We hope that this template helps you get started and you enjoy exploring making user interfaces with Slint. To learn more
-about the Slint APIs and the `.slint` markup language check out our [online documentation](https://slint.dev/docs).
+## Creating an Optimized Release Version
 
-Don't forget to edit this README to replace it by yours
+To create an optimized release version, use the following commands:
 
-Create a optimized release version
-     ```
-     cargo build --release
-     ```
+1. Build the optimized release version:
 
-To create an app build, install cargo bundle crate
-     ```
-     cargo install cargo-bundle
-     ```
+```
+cargo build --release
+```
 
-Add [package.metadata.bundle] in the Cargo.toml file with name and identifier
-Add description to the [package]
+## Building the App
 
-Build command for app version
-     ```
-     cargo bundle --release
-     ```
+To create an app build, install the `cargo-bundle` crate:
+
+1. Install `cargo-bundle`:
+
+```
+cargo install cargo-bundle
+```
+
+2. Add the `[package.metadata.bundle]` in the Cargo.toml file with the name and identifier.
+Add a description to the `[package]`.
+
+3. Build command for app version:
+
+```
+cargo bundle --release
+```
