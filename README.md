@@ -38,3 +38,21 @@ We hope that this template helps you get started and you enjoy exploring making 
 about the Slint APIs and the `.slint` markup language check out our [online documentation](https://slint.dev/docs).
 
 Don't forget to edit this README to replace it by yours
+
+Create a optimized release version
+     ```
+     cargo build --release
+     ```
+
+To create an app build, install cargo bundle crate
+     ```
+     cargo install cargo-bundle
+     ```
+
+Add [package.metadata.bundle] in the Cargo.toml file with name and identifier
+Add description to the [package]
+
+Build command for app version
+     ```
+     cargo bundle --release
+     ```
